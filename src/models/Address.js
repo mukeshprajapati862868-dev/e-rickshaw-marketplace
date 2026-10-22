@@ -31,6 +31,6 @@ const addressSchema = new mongoose.Schema(
 );
 
 addressSchema.index({ coordinates: '2dsphere' });
-addressSchema.index({ user: 1, isDefault: 1 });
+
 
 module.exports = mongoose.model('Address', addressSchema);
