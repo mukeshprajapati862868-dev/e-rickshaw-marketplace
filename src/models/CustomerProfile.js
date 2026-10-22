@@ -34,7 +34,7 @@ const customerProfileSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-customerProfileSchema.index({ user: 1 });
+
 customerProfileSchema.index({ 'address.coordinates': '2dsphere' });
 
 module.exports = mongoose.model('CustomerProfile', customerProfileSchema);
