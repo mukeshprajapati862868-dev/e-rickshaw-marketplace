@@ -120,7 +120,7 @@ const driverProfileSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-driverProfileSchema.index({ user: 1 });
+
 driverProfileSchema.index({ 'address.coordinates': '2dsphere' });
 driverProfileSchema.index({ overallVerificationStatus: 1 });
 driverProfileSchema.index({ mobile: 1 });
