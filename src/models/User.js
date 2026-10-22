@@ -71,8 +71,7 @@ userSchema.pre('validate', function (next) {
   next();
 });
 
-userSchema.index({ email: 1 }, { sparse: true });
-userSchema.index({ mobile: 1 }, { sparse: true });
+
 userSchema.index({ role: 1, isActive: 1 });
 userSchema.index({ isBlocked: 1 });
 
