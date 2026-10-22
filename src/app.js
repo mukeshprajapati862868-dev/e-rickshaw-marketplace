@@ -128,7 +128,12 @@ app.get('/api', (req, res) => {
     },
   });
 });
-
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'E-Rickshaw Marketplace API is running',
+  });
+});
 // API routes
 app.use('/api/auth', authRoutes);
 app.use('/api/vehicles', vehicleRoutes);
